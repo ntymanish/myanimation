@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1{
+    font-size: 300px;
+    color: gray;
+    opacity: 0;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    transform: translate(-20%,-10%);
+    /* border: 2px solid red; */
+
+    opacity: 0;
+    animation-name: one;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+h1::before{
+    /* border: 2px solid red; */
+    font-size: 2px;
+    content: 'manish';
+    position: absolute;
+    top: 50px;
+    height: 70%;
+    left: -10px;
+    background-color: brown;
+
+}
+h2{
+    font-size: 50px;
+    text-transform: capitalize;
+    text-shadow: 4px 4px 4px gray;
+
+
+    opacity: 0;
+    animation-name: gahmar;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+h3{
+    font-size: 37px;
+    color: gold;
+    text-transform: capitalize;
+    font-weight: lighter;
+
+    opacity: 0;
+    animation-name: gahmari;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+p{
+    font-size: 14px;
+    margin-top: 50px;
+}
+a{
+    text-decoration: none;
+    color: green;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+.btn{
+    display: inline-block;
+    background-color: gold;
+    border-radius: 20px;
+    text-transform: capitalize;
+    margin-top: 30px;
+    margin-left: 230px;
+    cursor: pointer;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: white;
+}
+.content{
+position: absolute;
+top: 40%;
+left: 15%;
+/* border: 2px solid red; */
+width: 30%;
+padding: 1rem;
+}
+.image-box .doted{
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 400px;
+    height: 300px;
+    /* border: 2px solid red; */
+    background-image: radial-gradient(#bdc3c7 20%, transparent 20%), radial-gradient(#ecf0f1 20%, transparent 20%);
+    background-position: 0 0, 50px 50px;
+    background-size: 20px 20px;
+
+    opacity: 0;
+    animation-name: manish;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+.little-doted{
+    position: absolute;
+    top: 55%;
+    right: 35%;
+    width: 200px;
+    height: 200px;
+    /* border: 2px solid red; */
+    background-image: radial-gradient(#bdc3c7 20%, transparent 20%), radial-gradient(#ecf0f1 20%, transparent 20%);
+    background-position: 0 0, 50px 50px;
+    background-size: 20px 20px;
+    
+
+    opacity: 0;
+    animation-name: life;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    
+}
+.image-box{
+    /* border: 2px solid red; */
+}
+.image-box img{
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    width: 350px;
+    height: 350px;
+    z-index: 999;
+    border-radius: 50%;
+    animation: img 2s;
+
+
+
+    
+}
+.image-box::before{
+    content: '';
+    position: absolute;
+    top: 25%;
+    right: 40%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: teal;
+    box-shadow: 4px 4px 4px gray;
+    z-index: 998;
+
+    opacity: 0;
+    animation: img-1 2s;
+    /* animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1); */
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes img{
+from{
+    opacity: 0;
+    transform: scale(0);
+    margin-right: 30%;
+}
+to{
+    opacity: 1;
+    transform: scale(1);
+    margin-right: 0;
+}
+}
+
+@keyframes img-1{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes manish {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes life{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes gahmari{
+    from{
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes one{
+    from{
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes gahmar{
+    from{
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
